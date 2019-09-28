@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "effector": "^20.3.0",
+    "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc -w"
+  },
+  "typings": "lib/index.d.ts",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.js",
+  "name": "effector-persist",
+  "version": "1.0.0",
+  "description": "Higher-order function for persist store in local storage",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "keywords": ["effector", "persist", "localstorage", "local storage"]
+}
