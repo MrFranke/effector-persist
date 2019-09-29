@@ -1,4 +1,14 @@
 {
+  "name": "effector-persist",
+  "version": "1.0.1",
+  "description": "Higher-order function for persist effector store in local storage",
+  "license": "MIT",
+  "keywords": [
+    "effector",
+    "persist",
+    "localstorage",
+    "local storage"
+  ],
   "dependencies": {
     "effector": "^20.3.0",
     "typescript": "^3.6.3"
@@ -7,13 +17,18 @@
     "build": "tsc",
     "start": "tsc -w"
   },
+  "files": [
+    "package.json",
+    "README.md",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrFranke/effector-persist"
+  },
+  "bugs": "https://github.com/MrFranke/effector-persist/issues",
   "typings": "lib/index.d.ts",
   "types": "lib/index.d.ts",
   "module": "lib/index.js",
-  "name": "effector-persist",
-  "version": "1.0.0",
-  "description": "Higher-order function for persist store in local storage",
-  "main": "lib/index.js",
-  "license": "MIT",
-  "keywords": ["effector", "persist", "localstorage", "local storage"]
+  "main": "lib/index.js"
 }
