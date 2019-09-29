@@ -4,12 +4,21 @@ Micro package for create persists [effector](http://effector.now.sh) store. Like
 ### Example:
 ```typescript
 import {withPersist} from "effector-persist";
-import { createStore, createEvent } from 'effector'
+import { createStore, createEvent } from "effector";
 
 const store = withPersist(createStore([], {name: 'shops'}));
 const addStore = createEvent<{name: string}>();
 
 store.on(addStore, (state, store) => [...state, store]);
+```
+### Example with Ramda
+```typescript
+import {withPersist} from "effector-persist";
+import { createStore } from "effector";
+import * as R from "ramda";
+
+const createPersistedStore  = R.pipe(createStore, withPersist);
+const store = createPersistedStore([], {name: 'shops'});
 ``` 
 
 ### How it works:
