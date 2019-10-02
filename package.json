@@ -30,5 +30,11 @@
   "typings": "lib/index.d.ts",
   "types": "lib/index.d.ts",
   "module": "lib/index.js",
-  "main": "lib/index.js"
+  "main": "lib/index.js",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "jest": "^24.9.0",
+    "jest-localstorage-mock": "^2.4.0",
+    "ts-jest": "^24.1.0"
+  }
 }
