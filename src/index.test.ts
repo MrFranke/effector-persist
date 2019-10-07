@@ -10,7 +10,7 @@ beforeAll(() => {
 
 test('Put new store to LocalStorage', () => {
   withPersist(createStore(TEST_STATE, {name: STORE_NAME}));
-  expect(localStorage.__STORE__['persist:test_store']).toBe(JSON.stringify(TEST_STATE));
+  expect(localStorage.__STORE__[`persist:${STORE_NAME}`]).toBe(JSON.stringify(TEST_STATE));
 });
 
 test('Put store without name', () => {
@@ -41,8 +41,8 @@ test('Update LocalStorage', () => {
 });
 
 test('Config LS prefix', () => {
-  const testKey = 'test_key';
-  const persistedStore = withPersist(createStore(TEST_STATE), {key: 'test_key'});
+  const key = 'test_key';
+  const persistedStore = withPersist(createStore(TEST_STATE), {key});
 
-  expect(localStorage.__STORE__[`${testKey}:${persistedStore.shortName}`]).toBe(JSON.stringify(TEST_STATE));
+  expect(localStorage.__STORE__[`${key}:${persistedStore.shortName}`]).toBe(JSON.stringify(TEST_STATE));
 });
