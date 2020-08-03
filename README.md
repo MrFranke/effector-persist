@@ -19,7 +19,17 @@ import * as R from "ramda";
 
 const createPersistedStore  = R.pipe(createStore, withPersist);
 const store = createPersistedStore([], {name: 'shops'});
-``` 
+```
+### Example with expired 
+```typescript
+import { withPersist } from "effector-persist";
+import { createStore, createEvent } from "effector";
+
+const store = withPersist(createStore([], {name: 'shops'}), {expire: Date.now() + 2000});
+const addStore = createEvent<{name: string}>();
+
+store.on(addStore, (state, store) => [...state, store]);
+```
 
 ### How it works:
 Every store update, `withPersist` cache result of update in LocalStorage with key `persist:<store_name>`.
