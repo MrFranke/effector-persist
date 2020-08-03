@@ -1,6 +1,6 @@
 {
   "name": "effector-persist",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Higher-order function for persist effector store in local storage",
   "license": "MIT",
   "keywords": [
