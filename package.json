@@ -10,12 +10,13 @@
     "local storage"
   ],
   "dependencies": {
-    "effector": "^20.3.0",
-    "typescript": "^3.6.3"
+    "effector": "^22.3.0",
+    "typescript": "^4.7.4"
   },
   "scripts": {
     "build": "tsc",
-    "start": "tsc -w"
+    "start": "tsc -w",
+    "test": "npx jest"
   },
   "files": [
     "package.json",
